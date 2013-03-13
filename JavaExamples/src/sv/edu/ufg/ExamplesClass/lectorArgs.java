@@ -12,17 +12,19 @@ import java.io.FileWriter;
  */
 public class lectorArgs  {
     public static void main(String[] args)throws Exception  {
-         FileWriter fw = new FileWriter("c:/file.dat");
-        if (args.length>0)
+         FileWriter fw ;
+        if (args.length>1)
         {
+            fw = new FileWriter(args[0]);
             System.out.println("Hay "+args.length+" argumentos"); 
             int i; 
-            for (i=0;i<args.length;i++) 
+            for (i=1;i<args.length;i++) 
             { 
               System.out.println("Parámetro"+i+":"+args[i]); 
-                      fw.write(args[i] + "\n");
+                      fw.write(args[i]+" - " + "\n");
             }
+           fw.close(); 
         }
-      fw.close();                                      
+                                           
     }
 }
