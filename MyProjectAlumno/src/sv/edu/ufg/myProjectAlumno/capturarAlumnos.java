@@ -22,11 +22,15 @@ public class capturarAlumnos {
      private static  String noAlumnoleer="";
     
   public static void main(String[] args) {
-      Alumno alumno = new Alumno();
-      Alumno arrayAlumno[];
-      int noAlumnosint = 0;
-      int i=0;
-            
+      Alumno alumno        = new Alumno();
+      Alumno arrayAlumno   [];
+      int noAlumnosint     = 0;
+      int i                = 0;
+      String carnet        = "";   
+      String nombres       = "";
+      String apellidos     = "";
+      String correo        = "";
+      String fechanacTexto = "";
 
     JOptionPane.showMessageDialog(null, "Bienvenido al sistema de alumnos!!!");
     String noAlumnos = JOptionPane.showInputDialog("No de Alumnos a Registrar");
@@ -40,11 +44,11 @@ public class capturarAlumnos {
 
     if (Integer.parseInt(opcionLectura)==1) {
     for (i=0;i<noAlumnosint;i++){
-        String carnet = JOptionPane.showInputDialog("Ingrese el carnet");
-        String nombres = JOptionPane.showInputDialog("Ingrese los nombres");
-        String apellidos = JOptionPane.showInputDialog("Ingrese los apellidos");
-        String correo = JOptionPane.showInputDialog("Ingrese el correo");
-        String fechanacTexto = JOptionPane.showInputDialog("Ingrese la fecha de nacimiento dd/MM/yyyy");
+        carnet = JOptionPane.showInputDialog("Ingrese el carnet");
+        nombres = JOptionPane.showInputDialog("Ingrese los nombres");
+        apellidos = JOptionPane.showInputDialog("Ingrese los apellidos");
+        correo = JOptionPane.showInputDialog("Ingrese el correo");
+        fechanacTexto = JOptionPane.showInputDialog("Ingrese la fecha de nacimiento dd/MM/yyyy");
 
          alumno.setId(i);
          alumno.setCarnet(carnet);
@@ -62,31 +66,29 @@ public class capturarAlumnos {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        /*alumno.imprimirInfoAlumno();
-        JOptionPane.showMessageDialog(null, alumno);   */       
-        arrayAlumno[i]=alumno;
-    }
-    /* guardar alumnos en base de datos*/
+        
+        arrayAlumno[i]=alumno; }
+    
+        /* guardar alumnos en base de datos*/
         for (i=0;i<noAlumnosint;i++){
            arrayAlumno[i].imprimirInfoAlumno();
          }
         /*AlumnosFacade.guardarAlumnos(arrayAlumno);*/
-      /*finaliza*/ }
+        /*finaliza*/ }
     else
     {   BufferedReader dataIn = new BufferedReader(new InputStreamReader(System.in));
         try {
             for (i=0;i<noAlumnosint;i++){
             System.out.println("Ingrese el carnet");
-            String carnet = dataIn.readLine();
+            carnet = dataIn.readLine();
             System.out.println("Ingrese los nombres");
-            String nombres = dataIn.readLine();
+            nombres = dataIn.readLine();
             System.out.println("Ingrese los apellidos");
-            String apellidos = dataIn.readLine();
+            apellidos = dataIn.readLine();
             System.out.println("Ingrese el correo");
-            String correo = dataIn.readLine();
+            correo = dataIn.readLine();
             System.out.println("Ingrese la fecha de nacimiento dd/MM/yyyy");
-            String fechanacTexto = dataIn.readLine();
+            fechanacTexto = dataIn.readLine();
 
             alumno.setId(i);
             alumno.setCarnet(carnet);
