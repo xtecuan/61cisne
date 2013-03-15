@@ -66,10 +66,12 @@ public class capturarAlumnos {
         /*alumno.imprimirInfoAlumno();
         JOptionPane.showMessageDialog(null, alumno);   */       
         arrayAlumno[i]=alumno;
-        arrayAlumno[i].imprimirInfoAlumno();
     }
     /* guardar alumnos en base de datos*/
-        AlumnosFacade.guardarAlumnos(arrayAlumno);
+        for (i=0;i<noAlumnosint;i++){
+           arrayAlumno[i].imprimirInfoAlumno();
+         }
+        /*AlumnosFacade.guardarAlumnos(arrayAlumno);*/
       /*finaliza*/ }
     else
     {   BufferedReader dataIn = new BufferedReader(new InputStreamReader(System.in));
@@ -102,13 +104,16 @@ public class capturarAlumnos {
                     e.printStackTrace();
                 }
             arrayAlumno[i]=alumno;
-            arrayAlumno[i].imprimirInfoAlumno();
+    
             }
         } catch (IOException e) {
             System.err.println("Error de i/o al leer la terminal!!!");
         } 
         
-         AlumnosFacade.guardarAlumnos(arrayAlumno);
+         for (i=0;i<noAlumnosint;i++){
+           arrayAlumno[i].imprimirInfoAlumno();
+         }
+        /* AlumnosFacade.guardarAlumnos(arrayAlumno);*/
     }
 
       
