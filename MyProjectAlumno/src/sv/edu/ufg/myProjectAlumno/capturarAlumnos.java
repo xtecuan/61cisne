@@ -11,6 +11,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import sv.edu.ufg.ejemplos.obtenerentrada.teclado.Alumno;
+import org.xtecuan.mir.facade.AlumnosFacade;
 
 /**
  *
@@ -25,7 +26,7 @@ public class capturarAlumnos {
       Alumno arrayAlumno[];
       int noAlumnosint = 0;
       int i=0;
-      
+            
 
     JOptionPane.showMessageDialog(null, "Bienvenido al sistema de alumnos!!!");
     String noAlumnos = JOptionPane.showInputDialog("No de Alumnos a Registrar");
@@ -67,6 +68,8 @@ public class capturarAlumnos {
         arrayAlumno[i]=alumno;
         arrayAlumno[i].imprimirInfoAlumno();
     }
+    /* guardar alumnos en base de datos*/
+        AlumnosFacade.guardarAlumnos(arrayAlumno);
       /*finaliza*/ }
     else
     {   BufferedReader dataIn = new BufferedReader(new InputStreamReader(System.in));
@@ -104,6 +107,8 @@ public class capturarAlumnos {
         } catch (IOException e) {
             System.err.println("Error de i/o al leer la terminal!!!");
         } 
+        
+         AlumnosFacade.guardarAlumnos(arrayAlumno);
     }
 
       
