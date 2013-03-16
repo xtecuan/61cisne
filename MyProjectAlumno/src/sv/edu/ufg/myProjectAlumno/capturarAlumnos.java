@@ -73,7 +73,7 @@ public class capturarAlumnos {
         for (i=0;i<noAlumnosint;i++){
            arrayAlumno[i].imprimirInfoAlumno();
          }
-        /*AlumnosFacade.guardarAlumnos(arrayAlumno);*/
+        AlumnosFacade.guardarAlumnos(arrayAlumno);
         /*finaliza*/ }
     else
     {   BufferedReader dataIn = new BufferedReader(new InputStreamReader(System.in));
@@ -115,7 +115,7 @@ public class capturarAlumnos {
          for (i=0;i<noAlumnosint;i++){
            arrayAlumno[i].imprimirInfoAlumno();
          }
-        /* AlumnosFacade.guardarAlumnos(arrayAlumno);*/
+       AlumnosFacade.guardarAlumnos(arrayAlumno);
     }
 
       
