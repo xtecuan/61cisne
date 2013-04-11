@@ -1,0 +1,41 @@
+/* 
+    Document   : estilos
+    Created on : 04-08-2013, 07:08:02 PM
+    Author     : xtecuan
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+table{
+    
+    color: blueviolet;
+    
+    font-family: cursive;
+    font-size: small;
+    
+    background-color: darkgray;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+th {
+    
+    background-color: aquamarine;
+    
+}
+
+ul{
+    
+    background-color: yellow;
+    
+    font-weight: bolder;
+    
+}
+
+
