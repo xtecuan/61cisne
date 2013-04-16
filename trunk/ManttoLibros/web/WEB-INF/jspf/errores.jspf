@@ -1,0 +1,13 @@
+<ul style="color: red">
+    <c:if test="${not empty errores}">
+
+        <c:forEach items="${errores}" var="error">
+
+            <li>${error}</li>
+
+        </c:forEach>
+
+        <c:remove scope="session" var="errores"/>
+
+    </c:if>
+</ul>

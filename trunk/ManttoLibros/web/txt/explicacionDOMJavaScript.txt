@@ -1,0 +1,39 @@
+DOM = Document Object Model
+
+Pagina HTML--------window
+                      |_____>document
+                                |____>forms[] (Arreglo de formularios) _________
+                                |____>plugins[] (Arreglo de plugins)            |__>elements[] (Elementos de Formulario)
+                                |____>applets[] (Arreglo de applets)                     |___> text_____________________________> (name,value,type,disabled,etc)    
+                                |____>images[] (Arreglo de imagenes)                     |___> select-one_______________________> option[]_______>  (selectedIndex,value,name,disabled,etc)
+                                                                                         |___> button
+
+var suVariable = 'Algún texto';
+var suNumero = 100.34;
+
+for, while, switch/case, if/else
+
+alert('Ingrese su nombre');
+
+var res = confirm('Desea realizar tal accion');
+
+var texto =  prompt("Hey there, good looking stranger!  What's your name?", "");
+
+Busqueda /find.ufg <====Servlet
+
+Parametros:
+
+find=id|all|nombres
+errorPage=/app/alumnosBuscar.jsp
+viewPage=/app/alumnosBuscar.jsp
+
+Si hace find por id:
+
+id=1
+
+Si hace find por nombres:
+
+nombres=Julian Tadeo
+
+
+                                                                                        
