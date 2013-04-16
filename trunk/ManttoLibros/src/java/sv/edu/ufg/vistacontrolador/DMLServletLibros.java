@@ -105,6 +105,7 @@ public class DMLServletLibros extends HttpServlet {
 
             if (action.equals(ACTION_NEW)) {
                 respuesta = LibrosFacade.createLibro(params, dataSource);
+                //session.setAttribute("clavereg",respuesta.toString());
                 List<LibroDTO> respuestaGrid = LibrosFacade.findAll(dataSource);
                 session.setAttribute("respuestaGrid", respuestaGrid);
             }
