@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>sv.edu.ufg.vistacontrolador.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FinderServlet</servlet-name>
+        <servlet-class>sv.edu.ufg.vistacontrolador.FinderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DMLServlet</servlet-name>
+        <servlet-class>sv.edu.ufg.vistacontrolador.DMLServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <description>Servlet libros</description>
+        <servlet-name>DMLServletLibros</servlet-name>
+        <servlet-class>sv.edu.ufg.vistacontrolador.DMLServletLibros</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login.ufg</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FinderServlet</servlet-name>
+        <url-pattern>/find.ufg</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DMLServlet</servlet-name>
+        <url-pattern>/dml.ufg</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DMLServletLibros</servlet-name>
+        <url-pattern>/DMLLibros</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <resource-ref>
+        <description>jdbc/malumnos</description>
+        <res-ref-name>jdbc/malumnos</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+        <res-sharing-scope>Shareable</res-sharing-scope>
+    </resource-ref>
+</web-app>

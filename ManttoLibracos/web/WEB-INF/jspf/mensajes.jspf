@@ -1,0 +1,6 @@
+<c:if test="${not empty respuesta}">
+
+    <h6 style="color: green"> Se ingreso un alumno con id: ${respuesta.id} </h6>
+    <c:remove scope="session" var="respuesta"/>
+
+</c:if>
