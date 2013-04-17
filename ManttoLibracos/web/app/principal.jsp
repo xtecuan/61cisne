@@ -16,13 +16,13 @@
     <body>
         <h1>Sistema de Biblioteca  Pagina Principal</h1>
         <hr>
-        <h6>Bienvenido al Sistema Bibliotecario: <c:out value="${usuariologin.login}"/></h6>
+        <h4>Bienvenido al Sistema Bibliotecario: <c:out value="${usuariologin.login}"/></h4>
 
         <table border="1" cellspacing="1" cellpadding="1">
 
             <tbody>
                 <tr>
-                    <td>Listado de Libros</td>
+                    <td width="90%">Listado de Libros</td>
                     <c:url value="/find.ufg" var="findurl">
 
                         <c:param name="find" value="all"/>
@@ -30,7 +30,7 @@
                         <c:param name="viewPage" value="/app/librosGrid.jsp"/>
 
                     </c:url>
-                    <td><a href="${findurl}">  Ir</a></td>
+                    <td width="50"><a href="${findurl}">  Ir</a></td>
                 </tr>
                 <tr>
                     <td>Agregar Libros</td>

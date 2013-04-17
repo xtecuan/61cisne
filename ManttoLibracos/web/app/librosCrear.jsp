@@ -11,11 +11,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Creación Libros</title>
+        
         <%@include file="/WEB-INF/jspf/functions.jspf" %>
         <%@include file="/WEB-INF/jspf/estilos.jspf" %>
     </head>
     <body>
         <h1>Creación Libros</h1>
+        <br>
+         <a HREF="/ManttoLibracos/app/principal.jsp">Retornar a Opciones</a>
+        <br>
 
         <%@include  file="/WEB-INF/jspf/mensajes.jspf" %>
 

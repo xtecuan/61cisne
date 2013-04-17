@@ -16,8 +16,9 @@
     </head>
     <body>
         <h1>Listado de Libros</h1>
-
         <br>
+         <a HREF="/ManttoLibracos/app/principal.jsp">Retornar a Opciones</a>
+          <br>
 
         <c:if test="${not empty respuestaGrid}">
             <%@include  file="gridLibros.jsp" %>

@@ -17,6 +17,10 @@
     </head>
     <body>
         <h1>Buscador Libros</h1>
+                <br>
+         <a HREF="/ManttoLibracos/app/principal.jsp">Retornar a Opciones</a>
+          <br>
+
 
         <form name="formBusqueda" action="${pageContext.servletContext.contextPath}/find.ufg" method="POST">
 
