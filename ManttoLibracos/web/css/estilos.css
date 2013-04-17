@@ -12,3 +12,10 @@ h1{
     
     color: blue;
 }
+
+tr:nth-of-type(odd) {
+    background-color: #AAA;
+}
+tr:nth-of-type(even) {
+    background-color: #EEE;
+}

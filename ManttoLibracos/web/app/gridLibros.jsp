@@ -32,7 +32,7 @@
                     <td>
                         <c:url value="/DMLLibros" var="deleteAl">
                             <c:param name="action" value="remove"/>
-                            <c:param name="id" value="${libro.id_libro}"/>
+                            <c:param name="id_libro" value="${libro.id_libro}"/>
                             <c:param name="errorPage" value="/app/librosGrid.jsp"/>
                             <c:param name="viewPage" value="/app/librosGrid.jsp"/>
                         </c:url>

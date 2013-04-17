@@ -308,7 +308,7 @@ public class LibrosFacade {
 
         }
 
-        psta.setInt(j, (Integer) params.get("id"));
+        psta.setInt(j, (Integer) params.get("id_libro"));
 
     }
 
@@ -400,7 +400,7 @@ public class LibrosFacade {
 
             conn = dataSource.getConnection();
             PreparedStatement psta = conn.prepareStatement(LibroDTO.getDELETE());
-            psta.setInt(1, (Integer) params.get("id"));
+            psta.setInt(1, (Integer) params.get("id_libro"));
 
             int rrr = psta.executeUpdate();
 
