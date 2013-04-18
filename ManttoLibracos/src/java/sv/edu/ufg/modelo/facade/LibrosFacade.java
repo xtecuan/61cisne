@@ -154,6 +154,67 @@ public class LibrosFacade {
         return respuesta;
     }
 
+      public static LibroDTO findByCodigo(String id, DataSource dataSource) {
+
+        LibroDTO respuesta = null;
+
+        Connection conn = null;
+
+        try {
+            conn = dataSource.getConnection();
+
+            PreparedStatement psta = conn.prepareStatement(LibroDTO.getSELECT_BY_CODIGO());
+             psta.setString(1,id);
+
+
+            ResultSet rset = psta.executeQuery();
+
+            while (rset.next()) {
+
+                respuesta = new LibroDTO();
+
+                respuesta.setId_libro(rset.getInt("id"));
+                respuesta.setCodigo(rset.getString("codigo"));
+                respuesta.setNombre(rset.getString("nombre"));
+                respuesta.setAutor(rset.getString("autor"));
+
+                String correo = rset.getString("isbn");
+
+                if (correo != null && correo.length() > 0) {
+                    respuesta.setisbn(correo);
+                }
+
+                java.sql.Date fechaNac = rset.getDate("fechaimpresion");
+
+                if (fechaNac != null) {
+                    respuesta.setFechaimpresion(new Date(fechaNac.getTime()));
+                }
+
+
+
+            }
+
+            rset.close();
+            psta.close();
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+
+        } finally {
+
+            try {
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        return respuesta;
+    }
+
     public static List<LibroDTO> findAll(DataSource dataSource) {
 
         List<LibroDTO> respuesta = new ArrayList<LibroDTO>(0);

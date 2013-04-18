@@ -35,8 +35,9 @@
                         <td>
                             <select name="find" onchange="enableTextSearch('formBusqueda', 'find');">
                                 <option value="">Seleccione</option>
-                                <option value="id">Busqueda por Id</option>
-                                <option value="nombres">Busqueda por nombres</option>
+                                <option value="id">Busqueda por Id de Libro</option>
+                                <option value="codigo">Busqueda por Codigo de Libro</option>
+                                <option value="nombres">Busqueda por Nombres</option>
                             </select>
                         </td>
                     </tr>
@@ -44,6 +45,10 @@
                         <td>Id:</td>
                         <td><input disabled="true" type="text" name="id" value="" /></td>
                     </tr>
+                   <tr>
+                        <td>Codigo</td>
+                        <td><input disabled="true" type="text" name="codigo" value="" /></td>
+                    </tr>                    
                     <tr>
                         <td>Nombres:</td>
                         <td><input disabled="true" type="text" name="nombres" value="" /></td>

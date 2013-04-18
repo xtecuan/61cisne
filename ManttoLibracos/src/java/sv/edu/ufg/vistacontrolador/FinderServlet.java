@@ -30,6 +30,7 @@ import sv.edu.ufg.modelo.facade.LibrosFacade;
 public class FinderServlet extends HttpServlet {
 
     private static final String ID = "id";
+    private static final String CODIGO = "codigo";
     private static final String ALL = "all";
     private static final String NOMBRES = "nombres";
     private static final String RESPUESTA = "respuestaGrid";
@@ -51,6 +52,7 @@ public class FinderServlet extends HttpServlet {
             throws ServletException, IOException {
         String find = request.getParameter("find");
         String id = request.getParameter("id");
+        String codigo = request.getParameter("codigo");
         String nombres = request.getParameter("nombres");
         String errorPage = request.getParameter("errorPage");
         String viewPage = request.getParameter("viewPage");
@@ -69,14 +71,19 @@ public class FinderServlet extends HttpServlet {
         if (findVal) {
 
             if (find.equals(ALL)) {
-               //respuesta = AlumnosFacade.findAll(dataSource);
+               
                 respuestaLibro   =  LibrosFacade.findAll(dataSource);
             }
 
             if (find.equals(ID) && idVal) {
-               // dto = AlumnosFacade.findById(id, dataSource);
-                //respuesta.add(dto);
+               
                 dtoLibro   =  LibrosFacade.findById(id,dataSource);
+                respuestaLibro.add(dtoLibro); 
+            }
+
+            if (find.equals(CODIGO)) {
+               
+                dtoLibro   =  LibrosFacade.findByCodigo(codigo,dataSource);
                 respuestaLibro.add(dtoLibro); 
             }
 

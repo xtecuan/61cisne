@@ -28,7 +28,7 @@
             <input type="hidden" name="action" value="edit" />
             <input type="hidden" name="errorPage" value="/app/librosEditar.jsp" />
             <input type="hidden" name="viewPage" value="/app/librosGrid.jsp" />
-            <input type="hidden" name="id" value="${param.id_libro}" />
+            <input type="hidden" name="id_libro" value="${param.id_libro}" />
 
             <table border="1">
 

@@ -17,16 +17,16 @@ public class LibroDTO {
 
     private static final String SELECT_BY_NAME = "select * from Libros where nombre like ?";
     private static final String SELECT_BY_ID = "select * from Libros where id=?";
+    private static final String SELECT_BY_CODIGO = "select * from Libros where codigo like ?";
     private static final String SELECT_ALL_COUNT = "select count(*) from Libros ";
     private static final String SELECT_ALL = "select * from Libros ";
-    private static final String INSERT = "insert into Libros(codigo,nombre,autor,ISBN,fechaimpresion,estado) "
-            + "values(?,?,?,?,?,?)";
     private static final String DELETE = "delete from Libros where id=?";
     private static final String UPDATE_BASE = "UPDATE libros SET ${0} WHERE id = ?";
     //Variable static
     public static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
     //Variables de instancia
     private Integer id_libro;
+    private Integer id;
     private String codigo;
     private String nombre;
     private String autor;
@@ -164,6 +164,11 @@ public class LibroDTO {
     public static String getUPDATE_BASE() {
         return UPDATE_BASE;
     }
+
+    public static String getSELECT_BY_CODIGO() {
+        return SELECT_BY_CODIGO;
+    }
+    
     
       public static String getInsert(Map<String, Object> params) {
         StringBuilder cols = new StringBuilder("insert into Libros(");
